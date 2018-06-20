@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Train Times</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/reset.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href=" https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+    />
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div id="jumbo" class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">Train Time</h1>
+                <p class="lead">Choo Choo Chew?</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        Current Train Schedule
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <table id="data-holder">
+                                <tr id="headers">
+                                    <th>Train Name</th>
+                                    <th>Destination</th>
+                                    <th>Frequency (min)</th>
+                                    <th>Next Arrival</th>
+                                    <th id="last">Minutes Away</th>
+                                </tr>
+
+                            </table>
+                        </h5>
+                        <br>
+                        <button id="reset" type="button" class="btn btn-outline-danger">Reset</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card-header">
+                    Add Train
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Train Name</h5>
+                    <input id="name" type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+                    <br>
+                    <h5 class=" card-title ">Destination</h5>
+                    <input id="destination" type="text " class="form-control" placeholder="" aria-label="
+                        " aria-describedby="basic-addon1 ">
+                    <br>
+                    <h5 class="card-title ">Start Time (HH:MM - military time)</h5>
+                    <input id="time" type="text " class="form-control " placeholder=" " aria-label="
+                        " aria-describedby="basic-addon1 ">
+                    <br>
+                    <h5 class="card-title ">Frequency (min)</h5>
+                    <input id="rate" type="text " class="form-control " placeholder=" " aria-label="
+                        " aria-describedby="basic-addon1 ">
+                    <br>
+                    <button type="button " id="button" class="btn btn-primary">Submit</button>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+    <br>
+
+
+    <script src="assets/script.js "></script>
+
+</body>
+
+</html>
